@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "notes-with-friends-frontend",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

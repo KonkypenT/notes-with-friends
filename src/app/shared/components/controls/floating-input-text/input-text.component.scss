@@ -1,0 +1,16 @@
+@import 'fonts';
+
+ion-item {
+  --padding-start: 0;
+  font-family: $fontFamily;
+  font-size: 14px;
+}
+
+ion-label {
+  padding: 0 10px;
+}
+
+ion-input {
+  --padding-start: 10px !important;
+  --padding-end: 10px !important;
+}

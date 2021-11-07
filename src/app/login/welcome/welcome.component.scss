@@ -1,0 +1,22 @@
+@import 'colors';
+@import 'header';
+
+ion-content {
+  margin: 24px 0;
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    ion-button {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .logo {
+    background: $black-2;
+  }
+}

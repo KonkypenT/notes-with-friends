@@ -1,0 +1,7 @@
+{
+  "name": "notes-with-friends-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

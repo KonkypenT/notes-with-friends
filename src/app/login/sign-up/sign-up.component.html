@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" (click)="goToBack()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <div class="logo">
+      <div class="title">
+        <span>Notes</span>
+      </div>
+    </div>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-title>
+      <strong>Sign Up</strong>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form *ngIf="!platformWeb" [formGroup]="form">
+    <app-input-text [form]="form" [controlName]="'name'" [placeholder]="'Name'" [position]="'fixed'"></app-input-text>
+    <app-input-text
+      [form]="form"
+      [controlName]="'lastname'"
+      [placeholder]="'Lastname'"
+      [position]="'fixed'"
+    ></app-input-text>
+    <app-input-text
+      [form]="form"
+      [controlName]="'nickname'"
+      [placeholder]="'Nickname'"
+      [position]="'fixed'"
+    ></app-input-text>
+    <app-input-text [form]="form" [controlName]="'email'" [placeholder]="'Email'" [position]="'fixed'"></app-input-text>
+  </form>
+  <form *ngIf="platformWeb" [formGroup]="form">
+    <input type="text" formControlName="name" />
+    <input type="text" formControlName="lastname" />
+    <input type="text" formControlName="nickname" />
+    <input type="text" formControlName="email" />
+  </form>
+</ion-content>
