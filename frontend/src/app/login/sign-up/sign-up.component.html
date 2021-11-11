@@ -21,7 +21,7 @@
 </ion-header>
 
 <ion-content>
-  <form *ngIf="!platformWeb" [formGroup]="form">
+  <form [formGroup]="form">
     <app-input-text [form]="form" [controlName]="'name'" [placeholder]="'Name'" [position]="'fixed'"></app-input-text>
     <app-input-text
       [form]="form"
@@ -36,11 +36,5 @@
       [position]="'fixed'"
     ></app-input-text>
     <app-input-text [form]="form" [controlName]="'email'" [placeholder]="'Email'" [position]="'fixed'"></app-input-text>
-  </form>
-  <form *ngIf="platformWeb" [formGroup]="form">
-    <input type="text" formControlName="name" />
-    <input type="text" formControlName="lastname" />
-    <input type="text" formControlName="nickname" />
-    <input type="text" formControlName="email" />
   </form>
 </ion-content>

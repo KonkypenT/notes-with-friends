@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, Platform } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,13 +9,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignUpComponent implements OnInit {
   public form = new FormGroup({});
-  public platformWeb = false;
 
-  constructor(private navCtrl: NavController, private fb: FormBuilder, private platform: Platform) {}
+  constructor(private navCtrl: NavController, private fb: FormBuilder) {}
 
   public ngOnInit(): void {
     this.initForm();
-    this.platformWeb = this.platform.is('mobileweb');
   }
 
   public goToBack(): void {
